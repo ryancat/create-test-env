@@ -1,0 +1,19 @@
+{
+  "name": "create-test-env",
+  "version": "0.0.1",
+  "description": "Help setup test environment for unit test and functional test in your javascript application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryancat/create-test-env.git"
+  },
+  "author": "Ryan Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryancat/create-test-env/issues"
+  },
+  "homepage": "https://github.com/ryancat/create-test-env#readme"
+}
