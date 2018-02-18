@@ -29,19 +29,17 @@ class PipeRunner {
     this.context = context || global
   }
 
-  static isPromise (promiseToCheck) {
-    return Object.prototype.toString.call(promiseToCheck) === '[object Promise]'
-  }
-
-  pipe (promiseArr = []) {
+  pipe (promiseCreatorArr = []) {
     // For single promise pipe
-    if (promiseArr && PipeRunner.isPromise(promiseArr)) {
-      promiseArr = [promiseArr]
+    if (promiseCreatorArr && typeof promiseCreatorArr === 'function') {
+      promiseCreatorArr = [promiseCreatorArr]
     }
 
-    this.pipeResult = promiseArr.reduce((prevPromise, nextPromise) => {
-      return prevPromise.then((prevResloved) => nextPromise)
-    }, this.pipeResult)
+    this.pipeResult = promiseCreatorArr.reduce(
+      (prevPromise, nextPromiseCreator) => {
+        return prevPromise.then((prevResloved) => nextPromiseCreator(prevResloved))
+      }, 
+      this.pipeResult)
 
     return this
   }

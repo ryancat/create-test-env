@@ -5,7 +5,7 @@
 const program = require('commander')
 
 // Source imports
-const TaskRunner = require('./TaskRunner')
+const AsyncTaskRunner = require('./AsyncTaskRunner')
 // const pipeRunner = require('./pipeRunner')
 
 // Reading from src files
@@ -41,22 +41,14 @@ program.parse(process.argv);
 
 // Main workflow
 function run (options) {
-  let taskRunner = new TaskRunner({
+  let asyncTaskRunner = new AsyncTaskRunner({
     options
   })
   
-  // pipeRunner.c
-  // .pipe(
-  //   clean, 
-  //   createTestConf, 
-  //   createUnitTests, 
-  //   addUnitTestDependencies, 
-  //   final)
-  
-  taskRunner
-    .clean()
-    .createTestConf()
-    .createUnitTests()
-    .addUnitTestScripts()
-    .final()
+  asyncTaskRunner
+    .pipe('clean')
+    .pipe('createTestConf')
+    .pipe('createUnitTests')
+    .pipe('addUnitTestScripts')
+    .pipe('final')
 }

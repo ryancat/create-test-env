@@ -34,6 +34,7 @@
   "dependencies": {
     "commander": "^2.14.1",
     "deep-equal": "^1.0.1",
+    "inquirer": "^5.1.0",
     "shelljs": "^0.8.1",
     "simple-deep-equal": "^1.0.0"
   }
