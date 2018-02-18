@@ -4,7 +4,8 @@
   "description": "Simple TODO list application",
   "main": "src/app.js",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "test:unit": "mocha ./tests/unit/**/*.test.js"
   },
   "author": "Ryan Chen",
   "license": "MIT",
@@ -15,6 +16,7 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
-    "webpack": "^3.11.0"
+    "webpack": "^3.11.0",
+    "mocha": "latest"
   }
 }

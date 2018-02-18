@@ -1,12 +1,12 @@
 #! /usr/bin/env node
 
 // Imports
-
 // Thrid party
 const program = require('commander')
 
 // Source imports
 const TaskRunner = require('./TaskRunner')
+// const pipeRunner = require('./pipeRunner')
 
 // Reading from src files
 const packageJson = require('./package.json')
@@ -45,9 +45,18 @@ function run (options) {
     options
   })
   
+  // pipeRunner.c
+  // .pipe(
+  //   clean, 
+  //   createTestConf, 
+  //   createUnitTests, 
+  //   addUnitTestDependencies, 
+  //   final)
+  
   taskRunner
     .clean()
     .createTestConf()
     .createUnitTests()
+    .addUnitTestScripts()
     .final()
 }

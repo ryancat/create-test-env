@@ -5,6 +5,13 @@ const util = {
   getExtendDefault: (targetObj = {}, defaultObj = {}) => {
     let result = {}
     return Object.assign(result, defaultObj, targetObj)
+  },
+
+  /**
+   * Pipe workflow with promise
+   */
+  pipe: (somePromise) => {
+
   }
 }
 
