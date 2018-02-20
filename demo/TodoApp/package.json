@@ -5,7 +5,9 @@
   "main": "src/app.js",
   "scripts": {
     "test": "npm test",
-    "test:unit": "mocha ./tests/unit/**/*.test.js"
+    "test:unit": "mocha ./tests/unit/**/*.test.js",
+    "test:unit2": "mocha ./tests/unit/**/*.test.js",
+    "test:unit3": "mocha ./tests/unit/**/*.test.js"
   },
   "author": "Ryan Chen",
   "license": "MIT",

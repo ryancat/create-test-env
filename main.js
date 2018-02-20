@@ -22,8 +22,9 @@ program.command('clean')
 
 program.command('run')
   .description('create test environment based on arguments or config files')
-  .option('-u, --unit-test-pattern', 'The unit test specs file pattern', 'tests/unit/**/*.test.js')
-  .option('-f, --functional-test-pattern', 'The functional test specs file pattern', 'tests/functional/**/*.test.js')
+  .option('-s, --unit-test-spec', 'The unit test specs file pattern', 'tests/unit/**/*.test.js')
+  // .option('-f, --functional-test-spec', 'The functional test specs file pattern', 'tests/functional/**/*.test.js')
+  .option('-u, --url', 'The url where your app runs')
   .option('-c, --conf-path', 'Test config file', 'test.conf.js')
   // .option('-P, --pineapple', 'Add pineapple')
   // .option('-b, --bbq-sauce', 'Add bbq sauce')
@@ -48,7 +49,9 @@ function run (options) {
   asyncTaskRunner
     .pipe('clean')
     .pipe('createTestConf')
-    .pipe('createUnitTests')
+    .pipe('createUnitTestSpecs')
+    .pipe('createFunctionalTestSpecs')
     .pipe('addUnitTestScripts')
+    .pipe('addFunctionalTestScripts')
     .pipe('final')
 }
