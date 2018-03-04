@@ -5,9 +5,25 @@
   "main": "src/app.js",
   "scripts": {
     "test": "npm test",
-    "test:unit": "mocha ./tests/unit/**/*.test.js",
-    "test:unit2": "mocha ./tests/unit/**/*.test.js",
-    "test:unit3": "mocha ./tests/unit/**/*.test.js"
+    "test:unit": "mocha ./src/**/*.unit.test.js",
+    "test:functional": "wdio wdio.config.js",
+    "test:functional-v2": "wdio wdio.config.js",
+    "test:unit-v2": "mocha ./src/**/*.unit.test.js",
+    "test:functional-v2-v2": "wdio wdio.config.js",
+    "test:unit_": "mocha ./src/**/*.unit.test.js",
+    "test:functional_": "wdio wdio.config.js",
+    "test:unit__": "mocha ./src/**/*.unit.test.js",
+    "test:functional__": "wdio wdio.config.js",
+    "test:unit___": "mocha ./src/**/*.unit.test.js",
+    "test:functional___": "wdio wdio.config.js",
+    "test:unit____": "mocha ./src/**/*.unit.test.js",
+    "test:functional____": "wdio wdio.config.js",
+    "test:unit_____": "mocha ./src/**/*.unit.test.js",
+    "test:functional_____": "wdio wdio.config.js",
+    "test:unit______": "mocha ./src/**/*.unit.test.js",
+    "test:functional______": "wdio wdio.config.js",
+    "test:unit_______": "mocha ./src/**/*.unit.test.js",
+    "test:functional_______": "wdio wdio.config.js"
   },
   "author": "Ryan Chen",
   "license": "MIT",
@@ -19,6 +35,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.2",
     "webpack": "^3.11.0",
-    "mocha": "latest"
+    "mocha": "latest",
+    "webdriverio": "latest"
   }
 }

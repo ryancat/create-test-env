@@ -48,10 +48,11 @@ function run (options) {
   
   asyncTaskRunner
     .pipe('clean')
-    .pipe('createTestConf')
-    .pipe('createUnitTestSpecs')
-    .pipe('createFunctionalTestSpecs')
-    .pipe('addUnitTestScripts')
-    .pipe('addFunctionalTestScripts')
+    // .pipe('createTestConf')
+    // .pipe('createUnitTestSpecs')
+    // .pipe('createFunctionalTestSpecs')
+    .pipe('addUnitTestConfigInPackageJson')
+    .pipe('addFunctionalTestConfigInPackageJson')
+    .pipe('addFunctionalTestConfig')
     .pipe('final')
 }
